@@ -1,26 +1,32 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { Box, Center } from '@chakra-ui/react';
+import React, { Suspense } from 'react';
+import { GetWindowSize } from './hooks/GetWindowSize';
+
+const MainMobile = React.lazy(() => import('./pages/mobile/Main'));
+const MainPc = React.lazy(() => import('./pages/pc/Main'));
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
+  const { width } = GetWindowSize();
+
+  if (width) {
+    return (
+      <Box
+        sx={{
+          fontFamily: 'a-otf-gothic-mb101-pr6n,sans-serif',
+          fontStyle: 'normal',
+          fontWeight: '400px',
+        }}
+      >
+        <Suspense
+          fallback={<Center w={'100vw'} h={'100vh'} bg={'white'}></Center>}
         >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+          {width > 700 ? <MainPc /> : <MainMobile />}
+        </Suspense>
+      </Box>
+    );
+  } else {
+    return <Box bg={'white'}></Box>;
+  }
 }
 
 export default App;
