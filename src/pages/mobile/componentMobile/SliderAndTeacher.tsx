@@ -1,17 +1,22 @@
 import { Box, Center, Flex, Link, Text } from '@chakra-ui/react';
 import Vimeo from '@u-wave/react-vimeo';
-import YouTube from 'react-youtube';
 
 import human from '../../../gifs/human.gif';
 import moon from '../../../images/moon.webp';
 import image2 from '../../../images/mark.webp';
 import logo from '../../../images/logo.webp';
 import image1 from '../../../images/3.webp';
+import LiteYouTubeEmbed from 'react-lite-youtube-embed';
 
 import 'keen-slider/keen-slider.min.css';
 import { useKeenSlider } from 'keen-slider/react';
+import 'react-lite-youtube-embed/dist/LiteYouTubeEmbed.css';
+import { useState } from 'react';
 
 const SliderAndTeacher = () => {
+  const [clicked, setClicked] = useState(false);
+  console.log(clicked);
+
   const [sliderRef, instanceRef] = useKeenSlider(
     {
       loop: true,
@@ -27,8 +32,11 @@ const SliderAndTeacher = () => {
         function nextTimeout() {
           clearTimeout(timeout);
           if (mouseOver) return;
+          if (clicked) return;
           timeout = setTimeout(() => {
-            slider.next();
+            if (!clicked) {
+              slider.next();
+            }
           }, 2000);
         }
         slider.on('created', () => {
@@ -38,13 +46,15 @@ const SliderAndTeacher = () => {
           });
           slider.container.addEventListener('mouseout', () => {
             mouseOver = false;
-            // nextTimeout();
+            nextTimeout();
           });
           nextTimeout();
         });
-        slider.on('dragStarted', clearNextTimeout);
-        slider.on('animationEnded', nextTimeout);
-        slider.on('updated', nextTimeout);
+        if (!clicked) {
+          slider.on('dragStarted', clearNextTimeout);
+          slider.on('animationEnded', nextTimeout);
+          slider.on('updated', nextTimeout);
+        }
       },
     ]
   );
@@ -213,8 +223,9 @@ const SliderAndTeacher = () => {
             alignItems="center"
             justifyContent={'center'}
             className="keen-slider__slide"
+            width={400}
           >
-            <YouTube
+            {/* <YouTube
               videoId="8viA4Wics9c"
               opts={{
                 width: '350',
@@ -222,7 +233,10 @@ const SliderAndTeacher = () => {
                 origin: 'https://www.youtube.com',
               }}
               loading="lazy"
-            />
+            /> */}
+            <Box width={400} height={250} position={'relative'} zIndex={9999}>
+              <LiteYouTubeEmbed id="8viA4Wics9c" title="speech" />
+            </Box>
             <Center flexDir={'column'} h={100} bg={'black'} w={'100vw'}>
               <Box>TED×UTokyo How to unravel the unwavering world?</Box>
               <Box className="pt-1">- A method DAYDREAM THEATER</Box>
@@ -242,14 +256,20 @@ const SliderAndTeacher = () => {
       >
         <Text
           ml={2}
-          onClick={() => instanceRef.current?.prev()}
+          onClick={() => {
+            instanceRef.current?.prev();
+            setClicked(true);
+          }}
           fontSize={'2xl'}
         >
           ◀︎
         </Text>
         <Text
           mr={2}
-          onClick={() => instanceRef.current?.next()}
+          onClick={() => {
+            instanceRef.current?.next();
+            setClicked(true);
+          }}
           fontSize={'2xl'}
         >
           ▶︎

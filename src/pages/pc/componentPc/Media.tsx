@@ -5,7 +5,8 @@ import image2 from '../../../images/mark.webp';
 import logo from '../../../images/logo.webp';
 import image1 from '../../../images/3.webp';
 import Vimeo from '@u-wave/react-vimeo';
-import YouTube from 'react-youtube';
+import LiteYouTubeEmbed from 'react-lite-youtube-embed';
+import 'react-lite-youtube-embed/dist/LiteYouTubeEmbed.css';
 
 const Media = () => {
   return (
@@ -202,7 +203,7 @@ const Media = () => {
           w={600}
         >
           <Box>
-            <YouTube
+            {/* <YouTube
               videoId="8viA4Wics9c"
               opts={{
                 width: '600',
@@ -210,7 +211,8 @@ const Media = () => {
                 origin: 'https://www.youtube.com',
               }}
               loading="lazy"
-            />
+            /> */}
+            <LiteYouTubeEmbed id="8viA4Wics9c" title="" />
             <Center flexDir={'column'} h={100} mt={4}>
               <Box>TED×UTokyo How to unravel the unwavering world?</Box>
               <Box className="pt-1">- A method DAYDREAM THEATER</Box>
