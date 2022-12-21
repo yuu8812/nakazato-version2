@@ -12,6 +12,7 @@ import 'keen-slider/keen-slider.min.css';
 import { useKeenSlider } from 'keen-slider/react';
 import 'react-lite-youtube-embed/dist/LiteYouTubeEmbed.css';
 import { useState } from 'react';
+import LazyLoad from 'react-lazyload';
 
 const SliderAndTeacher = () => {
   const [clicked, setClicked] = useState(false);
@@ -204,13 +205,15 @@ const SliderAndTeacher = () => {
             justifyContent={'center'}
             className="keen-slider__slide"
           >
-            <Vimeo
-              video="260878998"
-              autoplay={false}
-              muted={false}
-              width={380}
-              height={300}
-            />
+            <LazyLoad height={300}>
+              <Vimeo
+                video="260878998"
+                autoplay={false}
+                muted={false}
+                width={380}
+                height={300}
+              />
+            </LazyLoad>
             <Center flexDir={'column'} h={100} bg={'black'} w={'100vw'}>
               <Text>ツアー・イベント・パーティー</Text>
               <Text>「静かな集まり」(2018)</Text>

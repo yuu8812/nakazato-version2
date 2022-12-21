@@ -1,4 +1,4 @@
-import { Box, Center } from '@chakra-ui/react';
+import { Box } from '@chakra-ui/react';
 import React, { Suspense } from 'react';
 import { GetWindowSize } from './hooks/GetWindowSize';
 
@@ -17,9 +17,7 @@ function App() {
           fontWeight: '400px',
         }}
       >
-        <Suspense
-          fallback={<Center w={'100vw'} h={'100vh'} bg={'white'}></Center>}
-        >
+        <Suspense fallback={<Box w={'100vw'} h={'100vh'} bg={'white'}></Box>}>
           {width > 700 ? <MainPc /> : <MainMobile />}
         </Suspense>
       </Box>

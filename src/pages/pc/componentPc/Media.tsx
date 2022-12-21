@@ -7,6 +7,7 @@ import image1 from '../../../images/3.webp';
 import Vimeo from '@u-wave/react-vimeo';
 import LiteYouTubeEmbed from 'react-lite-youtube-embed';
 import 'react-lite-youtube-embed/dist/LiteYouTubeEmbed.css';
+import LazyLoad from 'react-lazyload';
 
 const Media = () => {
   return (
@@ -180,13 +181,15 @@ const Media = () => {
           w={600}
         >
           <Box>
-            <Vimeo
-              video="260878998"
-              autoplay={false}
-              muted={false}
-              width={600}
-              height={400}
-            />
+            <LazyLoad height={400}>
+              <Vimeo
+                video="260878998"
+                autoplay={false}
+                muted={false}
+                width={600}
+                height={400}
+              />
+            </LazyLoad>
             <Center flexDir={'column'} h={100}>
               <Text>ツアー・イベント・パーティー</Text>
               <Text>「静かな集まり」(2018)</Text>
@@ -195,7 +198,6 @@ const Media = () => {
             </Center>
           </Box>
         </Box>
-
         <Box
           flexDir={'column'}
           alignItems="center"

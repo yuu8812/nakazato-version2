@@ -20,6 +20,7 @@ import QAndA from './componentMobile/QAndA';
 import FooterLogos from './componentMobile/FooterLogos';
 import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
 import { Link as Scroll } from 'react-scroll';
+import LazyLoad from 'react-lazyload';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -230,16 +231,18 @@ const Home = () => {
         w="cal(100vw)"
         marginBottom={-500}
       >
-        <video
-          src={sandStorm}
-          style={{ transform: 'rotate(90deg) scale(2.0)' }}
-          width={600}
-          muted
-          autoPlay={true}
-          playsInline
-          preload="auto"
-          loop
-        ></video>
+        <LazyLoad height={600} offset={500}>
+          <video
+            src={sandStorm}
+            style={{ transform: 'rotate(90deg) scale(2.0)' }}
+            width={600}
+            muted
+            autoPlay={true}
+            playsInline
+            preload="auto"
+            loop
+          ></video>
+        </LazyLoad>
         <Text
           zIndex={10}
           position="absolute"
