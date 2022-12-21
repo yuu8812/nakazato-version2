@@ -3,7 +3,7 @@ import Home from './Home';
 
 const Main = () => {
   return (
-    <Box>
+    <Box fontFamily={'sans-serif'}>
       <Home />
     </Box>
   );

@@ -210,13 +210,25 @@ const Home = () => {
         sx={{ WebkitTextStroke: '0.7px' }}
       >
         <Box>
-          <Text className="text-3xl-each-text">Googleで検索してもわ</Text>
-          <Text className="text-3xl-each-text">からない、不思議なモ</Text>
-          <Text className="text-3xl-each-text">ノ・コトに出会いたい。</Text>
-          <Text className="text-3xl-each-text">誰のためでもない、あ</Text>
-          <Text className="text-3xl-each-text">なたがつくる、あなた</Text>
-          <Text className="text-3xl-each-text">の物語を発信するメディ</Text>
-          <Text className="text-3xl-each-text">アラボ。</Text>
+          <Text className="text-3xl-each-text text-narrow">
+            Googleで検索してもわ
+          </Text>
+          <Text className="text-3xl-each-text text-narrow">
+            からない、不思議なモ
+          </Text>
+          <Text className="text-3xl-each-text text-narrow">
+            ノ・コトに出会いたい。
+          </Text>
+          <Text className="text-3xl-each-text text-narrow">
+            誰のためでもない、あ
+          </Text>
+          <Text className="text-3xl-each-text text-narrow">
+            なたがつくる、あなた
+          </Text>
+          <Text className="text-3xl-each-text text-narrow">
+            の物語を発信するメディ
+          </Text>
+          <Text className="text-3xl-each-text text-narrow">アラボ。</Text>
         </Box>
       </Flex>
       <MovePhotoMovie />

@@ -13,7 +13,13 @@ import WaveMot from './componentPc/WaveMot';
 
 const Home = () => {
   return (
-    <Box>
+    <Box
+      sx={{
+        fontFamily: 'a-otf-gothic-mb101-pr6n,sans-serif',
+        fontStyle: 'normal',
+        fontWeight: '400px',
+      }}
+    >
       <Box position={'fixed'} top={0} zIndex={2000} overflow="hidden">
         <Header />
       </Box>
