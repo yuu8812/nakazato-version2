@@ -43,7 +43,11 @@ const QandA = () => {
         justifyContent="space-around"
         mt={10}
         w={'70%'}
-        sx={{ lineHeight: '30px' }}
+        sx={{
+          lineHeight: '30px',
+          WebkitTextStroke: '0.6px',
+          letterSpacing: '2px',
+        }}
       >
         <Box mt={10} borderBottom={'1px'} w={'30vw'} pb={14}>
           <Flex ml={10}>

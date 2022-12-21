@@ -415,9 +415,28 @@ const Introduction = () => {
                     プログラム内容や日時などの詳細や参加者の募集は随時世界ずっとWONDER公式サイトやSNSよりお知らせします。
                   </div>
                   <div>ご興味がある方はフォローをお願いいたします</div>
-                  <div className="mt-5 font-semibold">
-                    instagram ,twitter :<a href="/">@sekaizutto</a>
-                  </div>
+                  <Box pt={10}>
+                    instagram :
+                    <Box
+                      href="https://www.instagram.com/sekaizutto/"
+                      target="blank"
+                      as={'a'}
+                      pl={2}
+                    >
+                      @sekaizutto
+                    </Box>
+                  </Box>
+                  <Box pt={2}>
+                    twitter :
+                    <Box
+                      href="https://twitter.com/sekaizutto"
+                      target="blank"
+                      as={'a'}
+                      pl={2}
+                    >
+                      @sekaizutto
+                    </Box>
+                  </Box>
                 </div>
               </Flex>
               <Center w={'45vw'} px={10} flexDir="column">
@@ -474,7 +493,9 @@ const Introduction = () => {
                   <Box textAlign={'center'}>
                     <Text>メンバーは不定期で募集中。</Text>
                     <Text>
-                      興味をお持ちの方はメールまたはSNSでご連絡くださいませ。
+                      興味をお持ちの方はメール
+                      <br />
+                      またはSNSでご連絡くださいませ。
                     </Text>
                     <div>詳細をお伝えいたします。</div>
                   </Box>
