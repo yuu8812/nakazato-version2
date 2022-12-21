@@ -12,7 +12,7 @@ const Introduction = () => {
             letterSpacing: '3px',
           }}
           w={'100vw'}
-          pr={52}
+          pr={'10%'}
           pt={28}
         >
           コース内容紹介

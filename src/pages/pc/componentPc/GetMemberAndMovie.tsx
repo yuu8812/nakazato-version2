@@ -200,7 +200,7 @@ const GetMemberAndMovie = () => {
           opacity={0}
           height={'400px'}
           position={'absolute'}
-          right={350}
+          right={'25%'}
           top={-100}
         >
           僕たちは

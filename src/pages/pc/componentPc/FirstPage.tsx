@@ -53,14 +53,14 @@ const FirstPage = () => {
             as={'span'}
             fontSize={'md'}
             mx={4}
-            sx={{ WebkitTextStroke: '0.5px' }}
+            sx={{ WebkitTextStroke: '0.8px' }}
           >
             9階
           </Text>
           <Text as="span" fontSize={'xl'}>
             GAKU
           </Text>
-          <Text as="span" mx={4} sx={{ WebkitTextStroke: '0.5px' }}>
+          <Text as="span" mx={4} sx={{ WebkitTextStroke: '0.8px' }}>
             他にて開催中
           </Text>
         </Center>
@@ -77,7 +77,7 @@ const FirstPage = () => {
             mt={20}
             py={4}
             rounded={'full'}
-            px={20}
+            px={16}
             bg={'white'}
             color={'bold'}
             sx={{

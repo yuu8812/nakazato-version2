@@ -172,7 +172,7 @@ const Media = () => {
         fontSize={'9px'}
         background={'white'}
         sx={{ WebkitTextStroke: '0.4px' }}
-        ml={'250px'}
+        ml={'20%'}
       >
         <Box
           flexDir={'column'}
