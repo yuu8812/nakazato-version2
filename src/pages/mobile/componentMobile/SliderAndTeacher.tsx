@@ -61,7 +61,7 @@ const SliderAndTeacher = () => {
   );
 
   return (
-    <Box>
+    <Box mt={-28}>
       <Center flexDir={'column'}>
         <Text
           mt={5}
