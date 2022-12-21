@@ -13,6 +13,7 @@ const Map = () => {
       bg={'white'}
       zIndex={100}
       position={'relative'}
+      sx={{ WebkitTextStroke: '0.4px' }}
     >
       <Text my={14} fontSize={'xl'} borderBottom={'2px'}>
         アクセス

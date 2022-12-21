@@ -95,7 +95,7 @@ const GetMemberAndMovie = () => {
             style={{ position: 'absolute' }}
             width={'100%'}
           >
-            <source src={Gorilla} type="video/mp4" />
+            <source src={Finger} type="video/mp4" />
           </video>
         </Flex>
         <Flex
@@ -122,7 +122,7 @@ const GetMemberAndMovie = () => {
             style={{ position: 'absolute' }}
             width={'100%'}
           >
-            <source src={Finger} type="video/mp4" />
+            <source src={Gorilla} type="video/mp4" />
           </video>
         </Flex>
         <Flex

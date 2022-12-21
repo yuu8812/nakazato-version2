@@ -2,13 +2,13 @@ import logo from '../../../svgs/logo3.webp';
 import logo2 from '../../../images/logo.webp';
 import logo3 from '../../../images/universe.webp';
 import logo4 from '../../../images/dracle.webp';
-import { Center } from '@chakra-ui/react';
+import { Box, Center } from '@chakra-ui/react';
 
 const FooterLogos = () => {
   return (
     <Center
       flexDir={'column'}
-      h={'100vh'}
+      h={'110vh'}
       justifyContent={'space-around'}
       bg={'white'}
     >
@@ -31,7 +31,7 @@ const FooterLogos = () => {
         alt="logo"
         width={150}
       />
-      <a href="https://www.dracre.co.jp/" target={'blank'}>
+      <Box href="https://www.dracre.co.jp/" target={'blank'} as={'a'} pb={16}>
         <img
           loading="lazy"
           className="pt-20"
@@ -39,7 +39,7 @@ const FooterLogos = () => {
           alt="logo"
           width={250}
         />
-      </a>
+      </Box>
     </Center>
   );
 };

@@ -36,7 +36,9 @@ const FirstPage = () => {
             letterSpacing: '5px',
           }}
         >
-          <Text my={3}>わたしはヴィジョン?</Text>
+          <Text my={3} fontWeight={'900px'}>
+            わたしはヴィジョン?
+          </Text>
         </Flex>
       </Box>
       <Flex

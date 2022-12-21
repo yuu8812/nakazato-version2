@@ -33,7 +33,7 @@ const QandA = () => {
           fontSize={'4xl'}
           borderBottom={'4px'}
           pb={3}
-          sx={{ WebkitTextStroke: '1.8px', letterSpacing: '2px' }}
+          sx={{ WebkitTextStroke: '3.0px', letterSpacing: '2px' }}
         >
           Q&A
         </Text>

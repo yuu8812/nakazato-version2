@@ -132,7 +132,7 @@ const Media = () => {
                   <img loading="lazy" src={image2} alt="image2" width={250} />
                   <img loading="lazy" src={logo} alt="logo" width={400} />
                 </Center>
-                <Center flexDir={'column'} h={100}>
+                <Center flexDir={'column'} h={100} mt={-6}>
                   <Text>ミュータントスペース「YUMEGIWA 」</Text>
                   <Text mt={3}>店長</Text>
                 </Center>
@@ -157,7 +157,7 @@ const Media = () => {
                 src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/415877685&amp;color=%23ff5500&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;show_teaser=true&amp;visual=true"
               />
             </Center>
-            <Center flexDir={'column'} h={60} mt={-10}>
+            <Center flexDir={'column'} h={60} mt={-16}>
               <Text>AIT Podcast コレクティブとは宇宙意識・学びの拡張</Text>
               <Text my={1} fontSize={'7px'}>
                 (AIT 2018)
@@ -190,7 +190,7 @@ const Media = () => {
                 height={400}
               />
             </LazyLoad>
-            <Center flexDir={'column'} h={100}>
+            <Center flexDir={'column'} h={100} mt={-8}>
               <Text>ツアー・イベント・パーティー</Text>
               <Text>「静かな集まり」(2018)</Text>
               <Text>DAYDREAM THEATER</Text>
@@ -205,17 +205,8 @@ const Media = () => {
           w={600}
         >
           <Box>
-            {/* <YouTube
-              videoId="8viA4Wics9c"
-              opts={{
-                width: '600',
-                height: '350',
-                origin: 'https://www.youtube.com',
-              }}
-              loading="lazy"
-            /> */}
             <LiteYouTubeEmbed id="8viA4Wics9c" title="" />
-            <Center flexDir={'column'} h={100} mt={4}>
+            <Center flexDir={'column'} h={100} mt={0}>
               <Box>TED×UTokyo How to unravel the unwavering world?</Box>
               <Box className="pt-1">- A method DAYDREAM THEATER</Box>
               <Box className="pt-1">(東京大学2017)</Box>
